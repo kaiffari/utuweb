@@ -17,7 +17,11 @@ li#slant_line {
     color: red
 }
 
-table,
+table {
+    border-spacing: 10px;
+    border: 1px solid #333;
+}
+
 td {
     border: 1px solid #333;
 }
