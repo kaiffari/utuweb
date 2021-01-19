@@ -1,0 +1,23 @@
+a {
+    display: inline-block;
+    background: #69c;
+    color: #fff;
+    padding: 5px 10px;
+  }
+
+a:hover {
+    background-color: chocolate;
+}
+
+li {
+    list-style-type: square;
+}
+
+li#slant_line {
+    color: red
+}
+
+table,
+td {
+    border: 1px solid #333;
+}
