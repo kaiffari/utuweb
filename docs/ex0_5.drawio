@@ -1,0 +1,53 @@
+<mxfile host="app.diagrams.net" modified="2021-01-20T14:36:27.756Z" agent="5.0 (Windows)" etag="Jo1O4K6RnnCFktzpGUjb" version="14.2.5" type="github">
+  <diagram id="kgpKYQtTHZ0yAKxKKP6v" name="Page-1">
+    <mxGraphModel dx="1069" dy="557" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="3nuBFxr9cyL0pnOWT2aG-1" value="User" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="80" y="80" width="100" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="3nuBFxr9cyL0pnOWT2aG-5" value="Browser" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="370" y="80" width="100" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="lXnHcZpb4IZq-RsOdV4F-1" value="Server" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="700" y="80" width="100" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="lXnHcZpb4IZq-RsOdV4F-3" value="user types a note in text field&lt;br&gt;and clicks the submit button" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" parent="1" vertex="1">
+          <mxGeometry x="180" y="162" width="230" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="lXnHcZpb4IZq-RsOdV4F-5" value="event handler for submit redraws&lt;br&gt;the note list (spa.js)" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" parent="1" vertex="1">
+          <mxGeometry x="180" y="230" width="230" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lXnHcZpb4IZq-RsOdV4F-7" value="enter new note " style="endArrow=classic;html=1;exitX=0.496;exitY=0.182;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.52;entryY=0.177;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="129.60000000000014" y="152.08000000000004" as="sourcePoint" />
+            <mxPoint x="422" y="149.88" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lXnHcZpb4IZq-RsOdV4F-14" value="show updated page" style="endArrow=classic;html=1;exitX=0.513;exitY=0.77;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="421.29999999999995" y="289.99999999999994" as="sourcePoint" />
+            <mxPoint x="129.81034482758605" y="289.99999999999994" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-4KY9v0WWH6-50TFOD6B-1" value="POST new_note_spa with form data" style="endArrow=classic;html=1;exitX=0.5;exitY=0.23;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.49;entryY=0.227;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="419.9999999999998" y="180.19999999999993" as="sourcePoint" />
+            <mxPoint x="749" y="178.8800000000001" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-4KY9v0WWH6-50TFOD6B-2" value="status 201, confirm creation of new note" style="endArrow=classic;html=1;exitX=0.51;exitY=0.295;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.486;entryY=0.295;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
+          <mxGeometry x="-0.0301" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="750.9999999999998" y="208.79999999999995" as="sourcePoint" />
+            <mxPoint x="418.5999999999997" y="208.79999999999995" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fkE6qfMLnIFkn9UbLoBL-1" value="server should add the new note&lt;br&gt;into database if that was used" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="1">
+          <mxGeometry x="510" y="230" width="230" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
