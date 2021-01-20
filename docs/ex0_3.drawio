@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-01-20T14:39:23.452Z" agent="5.0 (Windows)" etag="zqiITdBKyA-sM38w84at" version="14.2.5" type="github">
+<mxfile host="app.diagrams.net" modified="2021-01-20T14:40:10.301Z" agent="5.0 (Windows)" etag="vs3jwfb_ucWkATpolBX8" version="14.2.5" type="github">
   <diagram id="kgpKYQtTHZ0yAKxKKP6v" name="Page-1">
     <mxGraphModel dx="1550" dy="807" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -25,7 +25,7 @@
         <mxCell id="lXnHcZpb4IZq-RsOdV4F-5" value="execute main.js to add HTML&lt;br&gt;code for list items for all notes" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" parent="1" vertex="1">
           <mxGeometry x="159" y="340" width="230" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="lXnHcZpb4IZq-RsOdV4F-6" value="status 200, HTML code of the page" style="endArrow=classic;html=1;exitX=0.51;exitY=0.295;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.486;entryY=0.295;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="lXnHcZpb4IZq-RsOdV4F-1" target="3nuBFxr9cyL0pnOWT2aG-5" edge="1">
+        <mxCell id="lXnHcZpb4IZq-RsOdV4F-6" value="status 200, HTML code of the static page" style="endArrow=classic;html=1;exitX=0.51;exitY=0.295;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.486;entryY=0.295;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="lXnHcZpb4IZq-RsOdV4F-1" target="3nuBFxr9cyL0pnOWT2aG-5" edge="1">
           <mxGeometry x="-0.0301" width="50" height="50" relative="1" as="geometry">
             <mxPoint x="720" y="228" as="sourcePoint" />
             <mxPoint x="440" y="228" as="targetPoint" />
