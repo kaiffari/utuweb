@@ -1,59 +1,29 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import App from './App'
 
-const App = () => {
-  const phonebookapp = {
-    title: 'Superadvanced web phonebook app',
-    contacts: [
-    {
-      name: 'John Doe',
-      phonenumber: '358401234567'
-    },
-    {
-      name: 'Jane Doe',
-      phonenumber: '44551234567'
-    },
-    {
-      name: 'Foo bar',
-      phonenumber: '000'
-    }
-    ]
+const notes = [
+  {
+    id: 1,
+    content: 'HTML on helppoa',
+    date: '2017-12-10T17:30:31.098Z',
+    important: true
+  },
+  {
+    id: 2,
+    content: 'Selain pystyy suorittamaan vain javascriptiä',
+    date: '2017-12-10T18:39:34.091Z',
+    important: false
+  },
+  {
+    id: 3,
+    content: 'HTTP-protokollan tärkeimmät metodit ovat GET ja POST',
+    date: '2017-12-10T19:20:14.298Z',
+    important: true
   }
+]
 
-  return (
-    <div>
-      <Header text={phonebookapp.title} />
-      <Contents contacts={phonebookapp.contacts} />
-    </div>
-  )
-}
-
-const Header = (props) => {
-  return (
-    <div>
-      <h1>{props.text}</h1>
-    </div>
-  )
-}
-
-const Contents = (props) => {
-  return (
-    <div>
-      <Entry contact={props.contacts[0]} />
-      <Entry contact={props.contacts[1]} />
-      <Entry contact={props.contacts[2]} />
-    </div>
-  )
-}
-
-const Entry = (props) => {
-  return (
-    <div>
-      <p>{props.contact.name} {props.contact.phonenumber}</p>    
-    </div>
-  )
-}
 ReactDOM.render(
-  <App />,
+  <App notes={notes} />,
   document.getElementById('root')
 )
