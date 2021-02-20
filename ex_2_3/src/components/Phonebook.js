@@ -3,17 +3,14 @@ import Header from './Header'
 import Contacts from './Contacts'
 
 function Phonebook({phonebook}) {
-    console.log('pblength', phonebook.contacts.length)
-/*    var book = phonebook.contacts
-    console.log('booklength', book.length)*/
+    /*console.log('pblength', phonebook.contacts.length)*/
     return (
         <div>
             <Header text={phonebook.title} />
             <Contacts contents={phonebook.contacts} />
+            <p>Total number of entries: {phonebook.contacts.length}</p>
         </div>
     );
 }
-/*            <Contacts contents={phonebook.contacts} />*/
-/*<Contacts contents={book} />*/
 
 export default Phonebook
