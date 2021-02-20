@@ -4,6 +4,8 @@ import Contacts from './Contacts'
 
 function Phonebook({phonebook}) {
     console.log('pblength', phonebook.contacts.length)
+/*    var book = phonebook.contacts
+    console.log('booklength', book.length)*/
     return (
         <div>
             <Header text={phonebook.title} />
@@ -11,5 +13,7 @@ function Phonebook({phonebook}) {
         </div>
     );
 }
+/*            <Contacts contents={phonebook.contacts} />*/
+/*<Contacts contents={book} />*/
 
 export default Phonebook

@@ -6,14 +6,17 @@ const App = () => {
     title: 'Superadvanced web phonebook app',
     contacts: [
     {
+      id: 1,
       name: 'John Doe',
       phonenumber: '358401234567'
     },
     {
+      id: 2,
       name: 'Jane Doe',
       phonenumber: '44551234567'
     },
     {
+      id: 3,
       name: 'Foo bar',
       phonenumber: '000'
     }
@@ -26,5 +29,6 @@ const App = () => {
     </div>
   )
 }
+
 
 export default App
