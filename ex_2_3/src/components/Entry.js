@@ -1,12 +1,13 @@
 import React from 'react'
 
-const Entry = (contact) => {
-  console.log('entry...', contact.name)
+const Entry = (entry) => {
+  console.log('entry...', entry)
+  console.log('name:', entry.contact.name)
     return (
-      'oops'
+      <li>Name: {entry.contact.name} Number: {entry.contact.phonenumber}</li>
     )
   }
 
-/*  <li key={contact.id}>Name: {contact.name} Number: {contact.phonenumber}</li>    */
+/*  <li>Name: {contact.name} Number: {contact.phonenumber}</li>    */
 
   export default Entry

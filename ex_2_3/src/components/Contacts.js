@@ -3,12 +3,15 @@ import Entry from './Entry'
 
 function Contacts ({contents}) {
     console.log('contacts...', contents.length)
+    const result = contents.map(contact => contact.id)
+    console.log('id: ', result)
     return(
-        <p>
-            {contents.map(contact => <entry contact={contents}/>)}
-        </p>,
-        'output'
+        <ul>
+            {contents.map(contact=><Entry key={contact.id} contact={contact} />)}
+        </ul>
     )
 }
+
+/*{contents.map(contact => <entry contact={contents}/>)},*/
 
 export default Contacts
