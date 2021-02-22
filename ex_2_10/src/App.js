@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import ShowReminders from './reminders.js'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      reminders: [
+        {
+          name: 'Buy some eggs',
+          timestamp: "2018-11-10T13:00:00.141Z"
+        }
+      ],
+      newName: ''
+    }
+  }
+
+  render() {
+    return (
+      <div>
+        <h2>Reminders</h2>
+        <form>
+          <div>
+            Name: <input />
+          </div>
+          <div>
+            <button type="submit">Add</button>
+          </div>
+        </form>
+        <h2>At time:</h2>
+        <ShowReminders reminders={this.state.reminders} />
+      </div>
+    
+    )
+  }
 }
 
-export default App;
+export default App
