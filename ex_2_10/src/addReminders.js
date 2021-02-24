@@ -19,8 +19,8 @@ class AddReminders extends React.Component {
 
       const reminderObject = {
         name: this.state.newReminder,
-        timestamp: this.state.newTime
-        /*id: this.props.reminders.length + 1*/
+        timestamp: this.state.newTime,
+        id: this.props.reminders.length + 1
       }
       console.log('new object: ',reminderObject)
     
