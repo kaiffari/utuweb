@@ -8,16 +8,11 @@ class ShowReminders extends React.Component {
 
   removeReminder = (e) => {
     if (window.confirm('Haluatko todella poistaa?')) {
-        /*axios
-        .delete('http://localhost:3001/reminders/', {params: {id: e.target.id}})
-        .then(response => {
-          console.log('delete promise fulfilled')
-        })*/
-        axios({
-          method: 'DELETE',
-          url: 'http://localhost:3001/reminders/' + e.target.id
-        });
-        console.log('delete promise fulfilled for id: ', e.target.id)
+        axios
+        .delete('http://localhost:3001/reminders/' + e.target.id)
+        .then(
+          (response) => {console.log('deleted: ', e.target.id)})
+
 
         /* clear parent state and update rendering */
         this.props.deleteReminder(e.target.id);

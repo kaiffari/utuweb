@@ -34,7 +34,7 @@ class App extends React.Component {
   }
 
   deleteReminder(id) {
-    console.log('deleteReminder...', {id})
+    /*console.log('deleteReminder...', {id})*/
     const remainReminders = this.state.reminders.filter(i => i.id != id)
     this.setState({reminders: remainReminders})
   }
