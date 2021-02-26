@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import ShowReminders from './reminders.js';
 import AddReminders from './addReminders.js';
 
@@ -13,14 +14,29 @@ class App extends React.Component {
         }*/
       ]
     }
-    this.setReminder = this.setReminder.bind(this)
+    this.setReminder = this.setReminder.bind(this);
+    this.deleteReminder = this.deleteReminder.bind(this);
+  }
+
+  componentDidMount() {
+    axios
+      .get('http://localhost:3001/reminders')
+      .then(response => {
+        console.log('get promise fulfilled')
+        this.setState({ reminders: response.data })
+      })
   }
 
   setReminder(reminders) {
-    console.log('setReminder...', {reminders})
     this.setState(
       {reminders: reminders}
     )
+  }
+
+  deleteReminder(id) {
+    console.log('deleteReminder...', {id})
+    const remainReminders = this.state.reminders.filter(i => i.id != id)
+    this.setState({reminders: remainReminders})
   }
 
   render() {
@@ -30,7 +46,9 @@ class App extends React.Component {
         <AddReminders
           reminders={this.state.reminders} 
           setReminder={this.setReminder}/>
-        <ShowReminders reminders={this.state.reminders}/>
+        <ShowReminders
+          reminders={this.state.reminders}
+          deleteReminder={this.deleteReminder}/>
       </div>
     
     )

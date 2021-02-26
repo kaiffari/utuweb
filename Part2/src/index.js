@@ -1,6 +1,23 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
+/*import axios from 'axios'
+
+
+axios.get('http://localhost:3001/notes').then(response => {
+  const notes = response.data
+  ReactDOM.render(
+    <App notes={notes} />,
+    document.getElementById('root')
+  )
+})*/
+
+/*axios
+  .get('http://localhost:3001/notes')
+  .then(response => {
+    const notes = response.data
+    console.log(notes)
+  })
 
 const notes = [
   {
@@ -21,9 +38,9 @@ const notes = [
     date: '2017-12-10T19:20:14.298Z',
     important: true
   }
-]
+]*/
 
 ReactDOM.render(
-  <App notes={notes} />,
+  <App />,
   document.getElementById('root')
 )

@@ -1,5 +1,5 @@
 import React from 'react';
-import ShowReminders from './reminders.js';
+import axios from 'axios';
 
 class AddReminders extends React.Component {
     constructor(props) {  /* voiko constructorin jättää pois, kokeile */
@@ -12,25 +12,37 @@ class AddReminders extends React.Component {
 
   addReminder = (event) => {
   
+    /* prevent normal submit rendering and get from network */
     event.preventDefault()
 
+    /* prevent duplicates */
     var pos = this.props.reminders.findIndex(o => o.name === this.state.newReminder)
     if (pos == -1) {
 
+      /* construct new object */
+      var maxid = 0
+      this.props.reminders.map(o => {if (o.id > maxid) maxid = o.id})
+      maxid = maxid + 1
       const reminderObject = {
         name: this.state.newReminder,
         timestamp: this.state.newTime,
-        id: this.props.reminders.length + 1
+        id: maxid
       }
-      console.log('new object: ',reminderObject)
     
+      /* concatenate new list and set to App state */
       const reminders = this.props.reminders.concat(reminderObject)
-      console.log('concatenated: ', reminders)
-
       this.props.setReminder(reminders)
 
-      /* clear input field */
+      /* write to json file */
+      axios
+        .post('http://localhost:3001/reminders', reminderObject)
+        .then(response => {
+          console.log('post promise fulfilled for id: ', maxid)
+        })
+
+        /* clear input field */
       this.state.newReminder = ''
+
     } else {
       alert('A duplicate reminder exists already!')
     }
@@ -62,7 +74,7 @@ class AddReminders extends React.Component {
               />
             </div>
             <div>
-              <button type="submit">Add</button>
+              <button type="submit">Lisää</button>
             </div>
         </form>
       </div>
