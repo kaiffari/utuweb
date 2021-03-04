@@ -35,7 +35,7 @@ class AddReminders extends React.Component {
 
       /* write to json file */
       axios
-        .post('http://localhost:3001/reminders', reminderObject)
+        .post('http://localhost:3001/api/reminders', reminderObject)
         .then(response => {
           console.log('post promise fulfilled for id: ', maxid)
         })

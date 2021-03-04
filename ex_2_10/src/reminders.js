@@ -9,7 +9,7 @@ class ShowReminders extends React.Component {
   removeReminder = (e) => {
     if (window.confirm('Haluatko todella poistaa?')) {
         axios
-        .delete('http://localhost:3001/reminders/' + e.target.id)
+        .delete('http://localhost:3001/api/reminders/' + e.target.id)
         .then(
           (response) => {console.log('deleted: ', e.target.id)})
 

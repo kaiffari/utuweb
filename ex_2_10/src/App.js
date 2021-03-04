@@ -20,7 +20,7 @@ class App extends React.Component {
 
   componentDidMount() {
     axios
-      .get('http://localhost:3001/reminders')
+      .get('http://localhost:3001/api/reminders')
       .then(response => {
         console.log('get promise fulfilled')
         this.setState({ reminders: response.data })
